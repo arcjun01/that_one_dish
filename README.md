@@ -3,7 +3,7 @@
 ## Project Name
 That One Dish
 
-## Tagline:
+## Tagline
 Track the dishes worth remembering and share them with friends.
 
 ## Problem Statement
