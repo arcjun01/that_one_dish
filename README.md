@@ -1,16 +1,26 @@
-# React + Vite
+# That One Dish
+That One Dish is a wep application that helps users save and organize dishes they want to remember. Users can store photos of dishes along with details such as restaurants information, cuisine, and add their personal notes. Dishes can also be saved as inspiration for home cooking. All dishes are shown in a gallery and can be shared with friends through shared boards.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Problem Statement
+People often remember a dish they loved but forget the restaurant name, location, or details of the meal. Existing apps like notes, photo galleries, or social media do not organize these food memories effectively. This makes it difficult to revisit or share favorite meals. 
 
-Currently, two official plugins are available:
+## Core Features
+- User authentication (Sign Up / Log In)
+- Create, view, and edit dish entries
+- Dish fields: name, photo, description or ingredients, optional restaurant information, add personal notes
+- Toggle for restaurant vs. inspiration dish
+- Gallery view of saved dishes
+- Node.js API with MySQL for database/storage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Data Model
+- **User:** owns dishes and joins boards
+- **Dish:** main entity, can be linked to restaurant
+- **Restaurant:** stores restaurant information for dishes
+- **Board:** shared list of dishes
+- **BoardMembership:** connects users and borads
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## User Flow
+1. User logs in
+2. User adds a dish (restaurant or inspiration)
+3. User uploads a photo and enters details
+4. Dish is saved and shown in the gallery
